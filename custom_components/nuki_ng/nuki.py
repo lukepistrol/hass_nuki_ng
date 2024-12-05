@@ -299,7 +299,7 @@ class NukiInterface:
         )
         result = dict()
         for item in resp:
-            if item.get("type") not in (0, 2, 4):
+            if item.get("type") not in (0, 1, 2, 4):
                 continue
             state = item.get("state", {})
             result[item.get("smartlockId")] = {
